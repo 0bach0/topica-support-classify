@@ -1,0 +1,25 @@
+.btn{
+ 
+}
+
+.container-video{
+    width:600px;
+    margin:0 auto;
+    margin-bottom:10px;
+}
+
+.container-button{
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.text-container{
+    width:200px;
+    display:inline;
+}
+
+.text-text-container{
+    margin-top:10px;
+    text-align:center;
+}

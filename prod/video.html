@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="stuff, to, help, search, engines, not" name="keywords">
+<meta content="What this page is about." name="description">
+<meta content="Display Webcam Stream" name="title">
+<title>Support Techaholic win Topica Hackathon!</title>
+  
+<style>
+#container {
+    margin: 0px auto;
+    
+}
+#videoElement {
+    margin: 0px auto;
+    width: 600px;
+    height: 400px;
+    background-color: #666;
+}
+</style>
+</head>
+  
+<body>
+<div >
+    <div class="">
+        <div id="container " class="container-video">
+            
+        	<canvas id="captureVideoCanvas" style="display:none;"></canvas>
+             <video id="videoElement" width="600px" height="400px" controls="true">
+                <source src="/video/video-1.mp4">
+                
+            </video>
+            <button onclick="prevVideoFunction()">Prev</button>
+            <button onclick="nextVideoFunction()">Next</button>
+            Snap: <strong id='snapshot'>None</strong>
+            <br/>
+        </div>
+        
+        <div class="container-button">
+            <button class="btn btn-primary" onclick="processCapture('neutral')" id='neutral-button'>1 - Không cảm xúc</button>
+            <button class="btn btn-primary" onclick="processCapture('surprise')" id='surprise-button'>2 - Ngạc nhiên</button>
+            <button class="btn btn-primary" onclick="processCapture('disgust')" id='disgust-button'>3 - Khinh bỉ</button>
+            <button class="btn btn-primary" onclick="processCapture('happy')" id='happy-button'>4 - Vui vẻ</button>
+            <button class="btn btn-primary" onclick="processCapture('angry')" id='angry-button'>5 - Tức giận</button>
+            <button class="btn btn-primary" onclick="processCapture('fear')" id='fear-button'>6 - Sợ hãi</button>
+            <button class="btn btn-primary" onclick="processCapture('sad')" id='sad-button'>7 - Buồn bã</button>
+        </div>
+        
+        
+    </div>
+</div>
+</hr>
+<!--<div class="text-text-container">-->
+<!--    <div class="text-container">-->
+<!--        <h1>Giúp chúng mình thêm động lực hoàn thành cuộc thi!</h1>-->
+<!--        <i>From: Bách, Khanh, Tùng, Tá with love</i>-->
+        
+<!--        <p>-->
+<!--            Team 4 thành viên chúng mình đang tham dự cuộc thi <a href="https://web.facebook.com/events/192133601289088/" target="_blank">Topica Hackathon</a>-->
+<!--        </p>-->
+<!--        <p>-->
+<!--            Hiện tại đã sang ngày thi đấu thứ 2 và chúng mình rất buồn vì dữ liệu ít quá nên nhận dạng kém .-->
+<!--            <br>-->
+<!--            Vì vậy các bạn hãy <strong>thể hiện gương mặt </strong> ứng với từng cảm xúc rồi -->
+<!--            <strong>-->
+<!--                ấn nút-->
+<!--            </strong>-->
+<!--             để chụp ảnh.-->
+<!--            <br>-->
+<!--            <strong>Cố gắng  nhìn thằng góc với  webcam!</strong> -->
+            
+<!--<strong>Nếu mở từ Facebook trên điện thoại thì nhớ ấn vào nút  3 chấm chọn  Open in chrome (hoặc trình duyệt khác).</strong>-->
+<!--            <br>-->
+<!--            Chúng mình xin hứa sẽ đảm bảo thông tin và có hậu tạ to nếu đạt giải :)-->
+<!--        </p>-->
+<!--    </div>-->
+<!--</div>-->
+
+<script type="text/javascript" src="./postdata-video.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<script>
+// postImage() {
+//         var self = this;
+//         var req = {
+//             method: 'POST',
+//             url: 'http://192.168.11.32:10017/',
+//             data: this.processCapture(),
+//             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+//                 transformRequest: function(obj) {
+//                     var str = [];
+//                     for(var p in obj)
+//                     str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+//                     return str.join("&");
+//                 },
+//         }
+
+//         this.http(req).then(
+//             function(res) {
+//                 console.log("DONE!!!", JSON.parse(JSON.parse(res.data).replace(/'/g, '"')));
+//                 window.MQTTsend('ows/emotion/'+window.meetingId, JSON.stringify({
+//                     "id": self.elementId,
+//                     "emotions": JSON.parse(JSON.parse(res.data).replace(/'/g, '"'))
+//                 }));
+//             },
+//             function(err) {
+//                 console.log("ERROR!!!");
+//                 console.log(err);
+//             }
+//         );
+//     }
+
+</script>
+</body>
+</html>
